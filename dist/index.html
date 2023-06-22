@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="heading-container">
+        <h1>TO-DO LIST</h1>
+    </div>
+    <div class="content-container">
+        <div class="menu content">
+            <div class="menu-item">
+                <h1>Tasks</h1>
+                <div class="wrapper">
+                    <button class="heading-item">All Tasks</button>
+                    <button class="heading-item">Today</button>
+                    <button class="heading-item">This Week</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <h1>Projects</h1>
+                <div class="wrapper">
+                    <button class="heading-item">Project 1</button>
+                    <button class="heading-item">Project 2</button>
+                    <button class="heading-item">Project 3 has a really long name, like very very very long</button>
+                </div>
+            </div>
+        </div>
+        <div class="app content">
+            <div id="app-heading">
+                <h1>HEADING</h1>
+            </div>
+            <div id="app-content">
+                <div class="task">
+                    <div class="task-left task-item-container">
+                        <input type="checkbox" name="" id="">
+                        <h2>Title</h2>
+                    </div>
+                    <div class="task-right task-item-container">
+                        <button>Details</button>
+                        <h2>29-06-23</h2>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </div>
+                </div>
+            </div>
+            <div id="app-button">
+                <button>+</button>
+            </div>
+
+            <!-- <form action="#" id="form">
+                <div id="flex-form">
+                    <div class="form-child">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" pattern="(^[A-Za-z]+$)">
+                    </div>
+                    <div class="form-child">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" pattern="(^[A-Za-z]+$)">
+                    </div>
+                    <div class="form-child">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-child">
+                        <label for="number">Phone Number</label>
+                        <input type="tel" id="number" name="number" maxlength="10" pattern="(^[0-9]{10}$)">
+                    </div>
+                    <div class="form-child">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <p id="error"></p>
+                    </div>
+                    <div class="form-child">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                    </div>
+                </div>
+            </form> -->
+            <div class="input-container">
+                <div class="input-container-top">
+                    <div id="input-container-heading">
+                        <h1>Create</h1>
+                    </div>
+                </div>
+                <div class="input-container-middle">
+                    <div id="input-container-sidebar">
+                        <h1>Hello</h1>
+                        <h1>There</h1>
+                    </div>
+                </div>
+                <div class="input-container-bottom">
+                    <div class="form-container">
+                        <form action="#" id="task-form">
+                            <div class="form-child">
+                                <label for="task-name">Task Name</label>
+                                <input type="text" id="task-name" name="task-name">
+                            </div>
+                            <div class="form-child">
+                                <label for="task-desc">Description</label>
+                                <textarea name="task-desc" id="task-desc" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-child-row">
+                                <div class="form-child">
+                                    <label for="task-date">Due Date</label>
+                                    <input type="date" name="task-date" id="task-date">
+                                </div> 
+                                <div class="form-child">
+                                    <label for="priority">Priority</label>
+                                    <select name="priority" id="priority">
+                                        <option value="low">Low</option>
+                                        <option value="high">High</option>
+                                    </select>
+                                </div> 
+                            </div>       
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-container">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
