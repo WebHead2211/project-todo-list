@@ -5,130 +5,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <div class="heading-container">
-        <h1>TO-DO LIST</h1>
-    </div>
-    <div class="content-container">
-        <div class="menu content">
-            <div class="menu-item">
-                <h1>Tasks</h1>
-                <div class="wrapper">
-                    <button class="heading-item">All Tasks</button>
-                    <button class="heading-item">Today</button>
-                    <button class="heading-item">This Week</button>
-                </div>
-            </div>
-            <div class="menu-item">
-                <h1>Projects</h1>
-                <div class="wrapper">
-                    <button class="heading-item">Project 1</button>
-                    <button class="heading-item">Project 2</button>
-                    <button class="heading-item">Project 3 has a really long name, like very very very long</button>
-                </div>
+    <div id="main-container">
+        <div id="header" class="section">
+            <h1 class="header-text">To Do List</h1>
+            <div class="create-button-container">
+                <button id="create-button-task" class="add-button"><div class="add-button-text">TASK</div></button>
+                <button id="create-button-project" class="add-button"><div class="add-button-text">PROJECT</div></button>
             </div>
         </div>
-        <div class="app content">
-            <div id="app-heading">
-                <h1>HEADING</h1>
+        <div id="middle" class="section">
+            <div class="content" id="sidebar">
+                <ul id="menu">
+                    <li class="selected">All Tasks</li>
+                    <li>Today</li>
+                    <li>This Week</li>
+                </ul>
             </div>
-            <div id="app-content">
-                <div class="task">
-                    <div class="task-left task-item-container">
-                        <input type="checkbox" name="" id="">
-                        <h2>Title</h2>
+            <div class="content" id="app">
+                <!-- <div class="task priority-high">
+                    <div class="line"></div>
+                    <div class="task-left">
+                        <div class="task-left-top">
+                            <input type="checkbox" name="" id="">
+                            <h2 class="task-title">Work</h2>
+                        </div>
+                        <p class="task-description"></p>
                     </div>
-                    <div class="task-right task-item-container">
-                        <button>Details</button>
-                        <h2>29-06-23</h2>
-                        <button>edit</button>
-                        <button>delete</button>
+                    <div class="task-right">
+                        <p class="task-date">01/07/23</p>
+                        <button class="task-details">Details</button>
+                        <button class="task-edit">Edit</button>
+                        <button class="task-delete">Delete</button>
                     </div>
                 </div>
+                <div class="task priority-low">
+                    <div class="task-left">
+                        <h2 class="task-title">Sleep</h2>
+                        <p class="task-description description-disabled">
+                            Hello World Hello World Hello World
+                        </p>
+                    </div>
+                    <div class="task-right">
+                        <p class="task-date">01/07/23</p>
+                        <button class="task-details">Details</button>
+                        <button class="task-edit">Edit</button>
+                        <button class="task-delete">Delete</button>
+                    </div>
+                </div> -->
             </div>
-            <div id="app-button">
-                <button>+</button>
+            
+            
+        </div>
+        <div id="footer" class="section">
+            <p class="footer-text">Created by <span><a href="https://github.com/WebHead2211" target="_blank">Aayush Bakre</a></span></p>
+        </div>
+        
+        
+    </div>
+    <div class="blur-container hidden"></div>
+    <div class="other-container disabled" id="form-task-container">
+        <div class="form-container">
+            <div class="close-button-container">
+                <button class="close-button">X</button>
             </div>
-
-            <!-- <form action="#" id="form">
-                <div id="flex-form">
-                    <div class="form-child">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" pattern="(^[A-Za-z]+$)">
-                    </div>
-                    <div class="form-child">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" pattern="(^[A-Za-z]+$)">
-                    </div>
-                    <div class="form-child">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    <div class="form-child">
-                        <label for="number">Phone Number</label>
-                        <input type="tel" id="number" name="number" maxlength="10" pattern="(^[0-9]{10}$)">
-                    </div>
-                    <div class="form-child">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password">
-                        <p id="error"></p>
-                    </div>
-                    <div class="form-child">
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="password" id="confirm-password" name="confirm-password">
-                    </div>
+            <h1>Create New Task</h1>
+            <form action="#" id="form-task">
+                <div class="form-child">
+                    <label for="form-task-title">NAME</label>
+                    <input type="text" name="" id="form-task-title" required>
                 </div>
-            </form> -->
-            <div class="input-container">
-                <div class="input-container-top">
-                    <div id="input-container-heading">
-                        <h1>Create</h1>
-                    </div>
+                <div class="form-child">
+                    <label for="form-task-date">DUE DATE</label>
+                    <input type="date" name="" id="form-task-date" required>
                 </div>
-                <div class="input-container-middle">
-                    <div id="input-container-sidebar">
-                        <h1>Hello</h1>
-                        <h1>There</h1>
-                    </div>
+                <div class="form-child">
+                    <label for="form-task-description">DESCRIPTION</label>
+                    <textarea name="" id="form-task-description" cols="30" rows="10" required></textarea>
                 </div>
-                <div class="input-container-bottom">
-                    <div class="form-container">
-                        <form action="#" id="task-form">
-                            <div class="form-child">
-                                <label for="task-name">Task Name</label>
-                                <input type="text" id="task-name" name="task-name">
-                            </div>
-                            <div class="form-child">
-                                <label for="task-desc">Description</label>
-                                <textarea name="task-desc" id="task-desc" cols="30" rows="10"></textarea>
-                            </div>
-                            <div class="form-child-row">
-                                <div class="form-child">
-                                    <label for="task-date">Due Date</label>
-                                    <input type="date" name="task-date" id="task-date">
-                                </div> 
-                                <div class="form-child">
-                                    <label for="priority">Priority</label>
-                                    <select name="priority" id="priority">
-                                        <option value="low">Low</option>
-                                        <option value="high">High</option>
-                                    </select>
-                                </div> 
-                            </div>       
-                        </form>
-                    </div>
+                <div class="form-child">
+                    <label for="form-task-priority">PRIORITY</label>
+                    <select name="" id="form-task-priority" required>
+                        <option value="high">HIGH</option>
+                        <option value="medium">MEDIUM</option>
+                        <option value="low">LOW</option>
+                    </select>
                 </div>
-            </div>
-
+                <div class="form-child">
+                    <label for="form-task-project">PROJECT</label>
+                    <select name="" id="form-task-project">
+                    </select>
+                </div>
+                <div class="form-child">
+                    <button type="submit" form="form-task" id="form-button-task" class="form-submit-button">Create</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="footer-container">
+
+    <div class="other-container disabled" id="form-project-container">
+        <div class="form-container">
+            <div class="close-button-container">
+                <button class="close-button">X</button>
+            </div>
+            <h1>Create New Project</h1>
+            <form action="#" id="form-project">
+                <div class="form-child">
+                    <label for="form-project-title">NAME</label>
+                    <input type="text" name="" id="form-project-title" required>
+                </div>
+                <div class="form-child">
+                    <button type="submit" form="form-project" id="form-button-project" class="form-submit-button">Create</button>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <div class="edit-container disabled" id="form-edit-container">
+        <div class="form-container">
+            <div class="close-button-container">
+                <button class="close-button">X</button>
+            </div>
+            <h1>Edit Task</h1>
+            <form action="#" id="form-edit">
+                <div class="form-child">
+                    <label for="form-edit-title">NAME</label>
+                    <input type="text" name="" id="form-edit-title" required>
+                </div>
+                <div class="form-child">
+                    <label for="form-edit-date">DUE DATE</label>
+                    <input type="date" name="" id="form-edit-date" required>
+                </div>
+                <div class="form-child">
+                    <label for="form-edit-description">DESCRIPTION</label>
+                    <textarea name="" id="form-edit-description" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="form-child">
+                    <label for="form-edit-priority">PRIORITY</label>
+                    <select name="" id="form-edit-priority" required>
+                        <option value="high">HIGH</option>
+                        <option value="medium">MEDIUM</option>
+                        <option value="low">LOW</option>
+                    </select>
+                </div>
+                <div class="form-child">
+                    <label for="form-edit-project">PROJECT</label>
+                    <select name="" id="form-edit-project">
+                    </select>
+                </div>
+                <div class="form-child">
+                    <button type="submit" form="form-edit" id="form-button-edit" class="form-submit-button">CONFIRM</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
     <script src="main.js"></script>
 </body>
 

@@ -1,17 +1,24 @@
-const List = (title, description, dueDate, priority, index) => {
+export {
+    makeNewTask,
+    allProjects,
+    allTasks
+}
+
+let allTasks = [];
+let allProjects = ['none'];
+
+const Task = (title, description, dueDate, priority, project, allIndex) => {
     return {
         title,
         description,
         dueDate,
         priority,
-        index
+        project,
+        allIndex
     }
 };
 
-const allTasks = [];
-
-export default function makeNewList(title, description, dueDate, priority, index) {
-    const list = List(title, description, dueDate, priority, index);
-    allTasks.push(list);
-    return allTasks;
+function makeNewTask(title, description, dueDate, priority, project, allIndex) {
+    const task = Task(title, description, dueDate, priority, project, allIndex);
+    return task;
 };
