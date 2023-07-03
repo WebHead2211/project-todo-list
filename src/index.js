@@ -36,7 +36,6 @@ function renderForm(name) {
 
     let today = new Date();
     today = format(today, 'yyyy-MM-dd');
-    console.log(today);
     document.getElementById('form-task-date').setAttribute('min', `${today}`);
     document.getElementById('form-edit-date').setAttribute('min', `${today}`);
 }

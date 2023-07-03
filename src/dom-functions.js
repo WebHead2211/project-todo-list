@@ -247,7 +247,6 @@ function deleteButton() {
             for(let i = 0; i < allTasks.length; i++) {
                 allTasks[i].allIndex = i;
             }
-            console.log(allTasks);
             clearAll();
             renderSortedTasks();
         });
