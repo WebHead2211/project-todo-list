@@ -1,6 +1,7 @@
-import { detailButton } from "./dom-functions";
-import { formTask, formProject, sidebarNavigation } from "./form-functions";
+import { detailButton, renderSortedTasks } from "./dom-functions";
+import { formTask, formProject, sidebarNavigation, renderProjects } from "./form-functions";
 import format from "date-fns/format";
+import { allProjects, allTasks } from "./list-functions";
 
 export {
     blurBackground
@@ -50,3 +51,16 @@ function blurBackground(currentContainer) {
         document.querySelector('.blur-container').classList.remove('hidden');
     }
 }
+
+let storedTasks = JSON.parse(localStorage.getItem('storedTasks'));
+let storedProjects = JSON.parse(localStorage.getItem('storedProjects'));
+if(storedTasks && storedTasks.length > 0) {
+    allTasks = [...storedTasks];
+    renderSortedTasks();
+}
+if(storedProjects && storedProjects.length > 0) {
+    allProjects = [...storedProjects];
+    renderSortedTasks();
+    renderProjects();
+}
+

@@ -83,6 +83,7 @@ function renderSortedTasks() {
     editButton();
     completedButton();
     deleteButton();
+    updateStorage();
 }
 
 function clearAll() {
@@ -251,4 +252,12 @@ function deleteButton() {
             renderSortedTasks();
         });
     });
+}
+
+function updateStorage() {
+    localStorage.clear();
+    let updateTasks = [...allTasks];
+    let updateProjects = [...allProjects];
+    localStorage.setItem('storedTasks', JSON.stringify(updateTasks));
+    localStorage.setItem('storedProjects', JSON.stringify(updateProjects));
 }

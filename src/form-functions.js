@@ -17,7 +17,8 @@ export {
     formTask,
     formProject,
     sidebarNavigation,
-    renderFormEdit
+    renderFormEdit,
+    renderProjects
 };
 
 const formTask = document.getElementById('form-task');
@@ -53,6 +54,7 @@ formProject.addEventListener('submit', event => {
     const newProject = [document.getElementById('form-project-title').value];
     allProjects.push(newProject);
     renderProjects();
+    renderSortedTasks();
 
 });
 
